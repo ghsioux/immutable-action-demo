@@ -1,0 +1,11 @@
+{
+    "name": "immutable-action-demo",
+    "version": "1.0.0",
+    "description": "A example of GitHub Immutable Action'",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+  }

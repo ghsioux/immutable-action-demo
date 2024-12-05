@@ -1,0 +1,7 @@
+name: 'Immutable Action Demo'
+description: 'A GitHub Immutable Action that prints a shinobi message"'
+inputs: {}
+outputs: {}
+runs:
+  using: 'node20'
+  main: 'index.js'
