@@ -1,0 +1,9 @@
+name: "Test Immutable Action with a tag that does not create an immutable action"
+on:
+  workflow_dispatch:
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test immutable action
+        uses: ghsioux/immutable-action-demo@v1.0.2
