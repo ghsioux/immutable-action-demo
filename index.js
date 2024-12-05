@@ -1,1 +1,1 @@
-console.log("Hello immutable shinobi!");
+console.log("Goodbye immutable shinobi!");
