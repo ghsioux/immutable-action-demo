@@ -5,14 +5,22 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Test immutable action (strict SemVer)
-        uses: ghsioux/immutable-action-demo@1.0.0
+      - name: Test immutable action (strict SemVer) # Using a specific immutable package version
+        uses: ghsioux/immutable-action-demo@1.0.0 
+        # Resolves directly to the immutable action package version 1.0.0,
+        # ensuring the exact behavior of the action as defined at that version.
 
-      - name: Test tag resolution to package version (full tag)
+      - name: Test tag resolution to package version (full tag) # Resolves a tag to the corresponding package version
         uses: ghsioux/immutable-action-demo@v1.0.0
+        # The tag v1.0.0 resolves to the immutable action package version 1.0.0.
+        # This verifies that full tags correctly map to their corresponding immutable packages.
 
       - name: Test tag resolution to package version (wildcard versioning patch version)
         uses: ghsioux/immutable-action-demo@v1.0
+        # The tag v1.0 resolves to the latest immutable action package matching version 1.0.x.
+        # This tests the patch-level wildcard resolution in Immutable Actions.
 
       - name: Test tag resolution to package version (wildcard versioning minor version)
         uses: ghsioux/immutable-action-demo@v1
+        # The tag v1 resolves to the latest immutable action package matching version 1.x.y.
+        # This tests the minor-level wildcard resolution in Immutable Actions.
